@@ -5,7 +5,7 @@ metadata:
   name: nginx-webserver
   namespace: default
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: nginx-test
@@ -17,4 +17,6 @@ spec:
       containers:
       - name: nginx
         image: nginx:latest
+        ports:
+        - containerPort: 80
       #namespace: default
